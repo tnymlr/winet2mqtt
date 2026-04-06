@@ -52,6 +52,7 @@ jobs:
         run: docker compose -f docker-compose.test.yml down -v
 
   build:
+    if: startsWith(github.ref, 'refs/tags/v')
     needs: [lint, test, integration]
     runs-on: ubuntu-latest
     permissions:
@@ -71,11 +72,9 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=ref,event=branch
-            type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
-            type=sha
+            type=raw,value=latest
 
       - uses: docker/setup-buildx-action@v3
 

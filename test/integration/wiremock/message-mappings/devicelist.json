@@ -1,0 +1,33 @@
+{
+  "name": "WiNet devicelist",
+  "trigger": {
+    "type": "message",
+    "channel": {
+      "type": "websocket",
+      "initiatingRequestPattern": {
+        "urlPath": "/ws/home/overview"
+      }
+    },
+    "message": {
+      "body": {
+        "matchesJsonPath": {
+          "expression": "$.service",
+          "equalTo": "devicelist"
+        }
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "send",
+      "channelTarget": {
+        "type": "originating"
+      },
+      "message": {
+        "body": {
+          "data": "{\"result_code\":1,\"result_msg\":\"success\",\"result_data\":{\"service\":\"devicelist\",\"list\":[{\"id\":1,\"dev_id\":1,\"dev_code\":3343,\"dev_type\":35,\"dev_sn\":\"A2582008920\",\"dev_name\":\"SH10RS\",\"dev_model\":\"SH10RS\",\"port_name\":\"COM1\",\"phys_addr\":\"1\",\"logc_addr\":\"1\"}],\"count\":1}}"
+        }
+      }
+    }
+  ]
+}

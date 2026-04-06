@@ -1,0 +1,617 @@
+{
+  "devices": [
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "model": "SH10RS",
+      "serial": "A2582008920",
+      "name": "SH10RS A2582008920",
+      "manufacturer": "Sungrow"
+    }
+  ],
+  "sensors": [
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "ac_current",
+      "sensor_name": "AC current",
+      "value": "",
+      "unit": "A",
+      "device_class": "current",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "ac_voltage",
+      "sensor_name": "AC voltage",
+      "value": "",
+      "unit": "V",
+      "device_class": "voltage",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "array_insulation_resistance",
+      "sensor_name": "Array insulation resistance",
+      "value": "",
+      "unit": "kΩ",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "backup_frequency",
+      "sensor_name": "Backup frequency",
+      "value": "",
+      "unit": "Hz",
+      "device_class": "frequency",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "battery_charging_energy_today",
+      "sensor_name": "Battery charging energy today",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "battery_charging_power",
+      "sensor_name": "Battery charging power",
+      "value": "",
+      "unit": "kW",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "battery_current",
+      "sensor_name": "Battery current",
+      "value": "",
+      "unit": "A",
+      "device_class": "current",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "battery_discharging_energy_today",
+      "sensor_name": "Battery discharging energy today",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "battery_discharging_power",
+      "sensor_name": "Battery discharging power",
+      "value": "",
+      "unit": "kW",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "battery_level_soc",
+      "sensor_name": "Battery level (SOC)",
+      "value": "",
+      "unit": "%",
+      "device_class": "battery",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "battery_soh",
+      "sensor_name": "Battery SOH",
+      "value": "",
+      "unit": "%",
+      "device_class": "battery",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "battery_temperature",
+      "sensor_name": "Battery temperature",
+      "value": "",
+      "unit": "°C",
+      "device_class": "temperature",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "battery_voltage",
+      "sensor_name": "Battery voltage",
+      "value": "",
+      "unit": "V",
+      "device_class": "voltage",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "bus_voltage",
+      "sensor_name": "Bus voltage",
+      "value": "",
+      "unit": "V",
+      "device_class": "voltage",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "daily_ac_output_yield",
+      "sensor_name": "Daily AC output yield",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "daily_battery_charging_energy_from_pv",
+      "sensor_name": "Daily battery charging energy from PV",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "daily_pv_yield",
+      "sensor_name": "Daily PV yield",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "daily_selfconsumption_rate",
+      "sensor_name": "Daily self-consumption rate",
+      "value": "",
+      "unit": "%",
+      "device_class": "battery",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "energy_purchasing_power",
+      "sensor_name": "Energy purchasing power",
+      "value": "",
+      "unit": "kW",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "feedin_energy_today_pv",
+      "sensor_name": "Feed-in energy today (PV)",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "internal_air_temperature",
+      "sensor_name": "Internal air temperature",
+      "value": "",
+      "unit": "°C",
+      "device_class": "temperature",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "max_charging_current_bms",
+      "sensor_name": "Max. charging current (BMS)",
+      "value": "",
+      "unit": "A",
+      "device_class": "current",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "max_discharging_current_bms",
+      "sensor_name": "Max. discharging current (BMS)",
+      "value": "",
+      "unit": "A",
+      "device_class": "current",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "maximum_apparent_power",
+      "sensor_name": "Maximum apparent power",
+      "value": "",
+      "unit": "VA",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "meter_grid_freq",
+      "sensor_name": "Meter grid freq",
+      "value": "",
+      "unit": "Hz",
+      "device_class": "frequency",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "meter_phasea_current",
+      "sensor_name": "Meter Phase-A current",
+      "value": "",
+      "unit": "A",
+      "device_class": "current",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "meter_phasea_voltage",
+      "sensor_name": "Meter Phase-A voltage",
+      "value": "",
+      "unit": "V",
+      "device_class": "voltage",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt1_current",
+      "sensor_name": "MPPT1 Current",
+      "value": "",
+      "unit": "A",
+      "device_class": "current",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt1_power",
+      "sensor_name": "MPPT1 Power",
+      "value": "",
+      "unit": "W",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt1_voltage",
+      "sensor_name": "MPPT1 Voltage",
+      "value": "",
+      "unit": "V",
+      "device_class": "voltage",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt2_current",
+      "sensor_name": "MPPT2 Current",
+      "value": "",
+      "unit": "A",
+      "device_class": "current",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt2_power",
+      "sensor_name": "MPPT2 Power",
+      "value": "",
+      "unit": "W",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt2_voltage",
+      "sensor_name": "MPPT2 Voltage",
+      "value": "",
+      "unit": "V",
+      "device_class": "voltage",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt3_current",
+      "sensor_name": "MPPT3 Current",
+      "value": "",
+      "unit": "A",
+      "device_class": "current",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt3_power",
+      "sensor_name": "MPPT3 Power",
+      "value": "",
+      "unit": "W",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt3_voltage",
+      "sensor_name": "MPPT3 Voltage",
+      "value": "",
+      "unit": "V",
+      "device_class": "voltage",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt4_current",
+      "sensor_name": "MPPT4 Current",
+      "value": "",
+      "unit": "A",
+      "device_class": "current",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt4_power",
+      "sensor_name": "MPPT4 Power",
+      "value": "",
+      "unit": "W",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt4_voltage",
+      "sensor_name": "MPPT4 Voltage",
+      "value": "",
+      "unit": "V",
+      "device_class": "voltage",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "mppt_total_power",
+      "sensor_name": "MPPT Total Power",
+      "value": "",
+      "unit": "W",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "phase_a_backup_current",
+      "sensor_name": "Phase A backup current",
+      "value": "",
+      "unit": "A",
+      "device_class": "current",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "phase_a_backup_power",
+      "sensor_name": "Phase A backup power",
+      "value": "",
+      "unit": "W",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "phase_a_backup_voltage",
+      "sensor_name": "Phase A backup voltage",
+      "value": "",
+      "unit": "V",
+      "device_class": "voltage",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "running_status",
+      "sensor_name": "Running status",
+      "value": "",
+      "unit": "",
+      "is_numeric": false
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_ac_output_energy",
+      "sensor_name": "Total AC output energy",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_active_power",
+      "sensor_name": "Total active power",
+      "value": "",
+      "unit": "kW",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_apparent_power",
+      "sensor_name": "Total apparent power",
+      "value": "",
+      "unit": "VA",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_backup_power",
+      "sensor_name": "Total backup power",
+      "value": "",
+      "unit": "W",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_battery_charging_energy",
+      "sensor_name": "Total battery charging energy",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_battery_charging_energy_from_pv",
+      "sensor_name": "Total battery charging energy from PV",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_battery_discharging_energy",
+      "sensor_name": "Total battery discharging energy",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_dc_power",
+      "sensor_name": "Total DC power",
+      "value": "",
+      "unit": "kW",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_export_active_power",
+      "sensor_name": "Total export active power",
+      "value": "",
+      "unit": "kW",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_feedin_energy",
+      "sensor_name": "Total feed-in energy",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_feedin_energy_pv",
+      "sensor_name": "Total feed-in energy (PV)",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_load_active_power",
+      "sensor_name": "Total load active power",
+      "value": "",
+      "unit": "kW",
+      "device_class": "power",
+      "state_class": "measurement",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_load_energy_consumption_from_pv",
+      "sensor_name": "Total load energy consumption from PV",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_power_factor",
+      "sensor_name": "Total power factor",
+      "value": "",
+      "unit": " ",
+      "device_class": "power_factor",
+      "is_numeric": false
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_purchased_energy",
+      "sensor_name": "Total purchased energy",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_pv_yield",
+      "sensor_name": "Total PV yield",
+      "value": "",
+      "unit": "kWh",
+      "device_class": "energy",
+      "state_class": "total_increasing",
+      "is_numeric": true
+    },
+    {
+      "device_slug": "SH10RS_A2582008920",
+      "sensor_slug": "total_reactive_power",
+      "sensor_name": "Total reactive power",
+      "value": "",
+      "unit": "var",
+      "device_class": "reactive_power",
+      "state_class": "measurement",
+      "is_numeric": true
+    }
+  ]
+}

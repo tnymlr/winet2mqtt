@@ -1,0 +1,33 @@
+{
+  "name": "WiNet real data",
+  "trigger": {
+    "type": "message",
+    "channel": {
+      "type": "websocket",
+      "initiatingRequestPattern": {
+        "urlPath": "/ws/home/overview"
+      }
+    },
+    "message": {
+      "body": {
+        "matchesJsonPath": {
+          "expression": "$.service",
+          "equalTo": "real"
+        }
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "send",
+      "channelTarget": {
+        "type": "originating"
+      },
+      "message": {
+        "body": {
+          "data": "{\"result_code\":1,\"result_msg\":\"success\",\"result_data\":{\"service\":\"real\",\"list\":[{\"data_name\":\"I18N_COMMON_TOTAL_ACTIVE_POWER\",\"data_value\":\"3.5\",\"data_unit\":\"kW\"},{\"data_name\":\"I18N_COMMON_AC_VOLTAGE\",\"data_value\":\"239.5\",\"data_unit\":\"V\"},{\"data_name\":\"I18N_COMMON_AC_CURRENT\",\"data_value\":\"1.2\",\"data_unit\":\"A\"},{\"data_name\":\"I18N_COMMON_RUNNING_STATUS\",\"data_value\":\"Running\",\"data_unit\":\"\"},{\"data_name\":\"I18N_COMMON_DAILY_PV_YIELD\",\"data_value\":\"12.5\",\"data_unit\":\"kWh\"},{\"data_name\":\"I18N_COMMON_TOTAL_PV_YIELD\",\"data_value\":\"1234.5\",\"data_unit\":\"kWh\"},{\"data_name\":\"I18N_COMMON_BATTERY_SOC\",\"data_value\":\"85\",\"data_unit\":\"%\"},{\"data_name\":\"I18N_COMMON_BATTERY_VOLTAGE\",\"data_value\":\"48.2\",\"data_unit\":\"V\"},{\"data_name\":\"I18N_COMMON_TOTAL_POWER_FACTOR\",\"data_value\":\"0.95\",\"data_unit\":\"\"},{\"data_name\":\"I18N_COMMON_TOTAL_REACTIVE_POWER\",\"data_value\":\"1.5\",\"data_unit\":\"kvar\"},{\"data_name\":\"I18N_COMMON_INTERNAL_AIR_TEMPERATURE\",\"data_value\":\"35.2\",\"data_unit\":\"\\u2103\"}],\"count\":11}}"
+        }
+      }
+    }
+  ]
+}

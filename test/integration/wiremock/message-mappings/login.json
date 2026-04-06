@@ -1,0 +1,33 @@
+{
+  "name": "WiNet login",
+  "trigger": {
+    "type": "message",
+    "channel": {
+      "type": "websocket",
+      "initiatingRequestPattern": {
+        "urlPath": "/ws/home/overview"
+      }
+    },
+    "message": {
+      "body": {
+        "matchesJsonPath": {
+          "expression": "$.service",
+          "equalTo": "login"
+        }
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "send",
+      "channelTarget": {
+        "type": "originating"
+      },
+      "message": {
+        "body": {
+          "data": "{\"result_code\":1,\"result_msg\":\"success\",\"result_data\":{\"service\":\"login\",\"token\":\"mock_auth\",\"uid\":1}}"
+        }
+      }
+    }
+  ]
+}

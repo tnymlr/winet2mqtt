@@ -1,0 +1,33 @@
+{
+  "name": "WiNet real_battery data",
+  "trigger": {
+    "type": "message",
+    "channel": {
+      "type": "websocket",
+      "initiatingRequestPattern": {
+        "urlPath": "/ws/home/overview"
+      }
+    },
+    "message": {
+      "body": {
+        "matchesJsonPath": {
+          "expression": "$.service",
+          "equalTo": "real_battery"
+        }
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "send",
+      "channelTarget": {
+        "type": "originating"
+      },
+      "message": {
+        "body": {
+          "data": "{\"result_code\":1,\"result_msg\":\"success\",\"result_data\":{\"service\":\"real_battery\",\"list\":[{\"data_name\":\"I18N_COMMON_BATTERY_CHARGING_POWER\",\"data_value\":\"0.0\",\"data_unit\":\"kW\"},{\"data_name\":\"I18N_COMMON_BATTERY_DISCHARGING_POWER\",\"data_value\":\"1.2\",\"data_unit\":\"kW\"},{\"data_name\":\"I18N_COMMON_BATTERY_CURRENT\",\"data_value\":\"2.5\",\"data_unit\":\"A\"},{\"data_name\":\"I18N_COMMON_BATTERY_TEMPERATURE\",\"data_value\":\"28.5\",\"data_unit\":\"\\u2103\"},{\"data_name\":\"I18N_COMMON_BATTERY_SOH\",\"data_value\":\"98\",\"data_unit\":\"%\"}],\"count\":5}}"
+        }
+      }
+    }
+  ]
+}

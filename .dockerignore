@@ -1,0 +1,6 @@
+.git
+.github
+.golangci.yml
+*.md
+LICENSE
+Makefile

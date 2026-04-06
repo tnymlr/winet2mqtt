@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "/i18n/.*\\.properties"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "en_US.properties",
+    "headers": {
+      "Content-Type": "text/plain"
+    }
+  }
+}

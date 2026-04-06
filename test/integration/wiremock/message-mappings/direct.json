@@ -1,0 +1,33 @@
+{
+  "name": "WiNet direct data",
+  "trigger": {
+    "type": "message",
+    "channel": {
+      "type": "websocket",
+      "initiatingRequestPattern": {
+        "urlPath": "/ws/home/overview"
+      }
+    },
+    "message": {
+      "body": {
+        "matchesJsonPath": {
+          "expression": "$.service",
+          "equalTo": "direct"
+        }
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "send",
+      "channelTarget": {
+        "type": "originating"
+      },
+      "message": {
+        "body": {
+          "data": "{\"result_code\":1,\"result_msg\":\"success\",\"result_data\":{\"service\":\"direct\",\"list\":[{\"name\":\"I18N_COMMON_GROUP_BUNCH_TITLE_AND%@1\",\"voltage\":\"350.2\",\"voltage_unit\":\"V\",\"current\":\"5.1\",\"current_unit\":\"A\"},{\"name\":\"I18N_COMMON_GROUP_BUNCH_TITLE_AND%@2\",\"voltage\":\"340.8\",\"voltage_unit\":\"V\",\"current\":\"4.9\",\"current_unit\":\"A\"}],\"count\":2}}"
+        }
+      }
+    }
+  ]
+}

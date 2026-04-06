@@ -1,0 +1,37 @@
+run:
+  timeout: 5m
+
+linters:
+  enable:
+    - errcheck
+    - govet
+    - staticcheck
+    - unused
+    - gosimple
+    - ineffassign
+    - typecheck
+    - misspell
+    - gofmt
+    - goimports
+    - gosec
+    - unconvert
+    - goconst
+    - prealloc
+
+linters-settings:
+  govet:
+    shadow: true
+  gosec:
+    excludes:
+      - G402 # TLS InsecureSkipVerify - required for WiNet self-signed certs
+
+  misspell:
+    ignore-words:
+      - mosquitto # Eclipse Mosquitto is the correct project name
+  goconst:
+    ignore-tests: true
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0

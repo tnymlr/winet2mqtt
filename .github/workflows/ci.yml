@@ -60,6 +60,9 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v')
     needs: [lint, test, integration]
     runs-on: ubuntu-latest
+    outputs:
+      digest: ${{ steps.push.outputs.digest }}
+      image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
     steps:
       - uses: actions/checkout@v4
 
@@ -81,9 +84,10 @@ jobs:
       - uses: docker/setup-buildx-action@v3
 
       - uses: docker/build-push-action@v5
+        id: push
         with:
           context: .
-          push: ${{ github.event_name != 'pull_request' }}
+          push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
@@ -100,27 +104,30 @@ jobs:
 
       - name: Generate release notes
         id: notes
+        env:
+          IMAGE: ${{ needs.build.outputs.image }}
+          DIGEST: ${{ needs.build.outputs.digest }}
         run: |
+          VERSION="${{ github.ref_name }}"
           PREV_TAG=$(git tag --sort=-version:refname | sed -n '2p')
-          if [ -n "$PREV_TAG" ]; then
-            echo "body<<EOF" >> $GITHUB_OUTPUT
-            echo "## Changes" >> $GITHUB_OUTPUT
-            git log --pretty=format:"- %s" "$PREV_TAG"..HEAD >> $GITHUB_OUTPUT
-            echo "" >> $GITHUB_OUTPUT
-            echo "" >> $GITHUB_OUTPUT
-            echo "## Docker" >> $GITHUB_OUTPUT
-            echo '```' >> $GITHUB_OUTPUT
-            echo "docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}" >> $GITHUB_OUTPUT
-            echo '```' >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
-          else
-            echo "body<<EOF" >> $GITHUB_OUTPUT
-            echo "## Docker" >> $GITHUB_OUTPUT
-            echo '```' >> $GITHUB_OUTPUT
-            echo "docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}" >> $GITHUB_OUTPUT
-            echo '```' >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
-          fi
+          {
+            echo "body<<EOF"
+            if [ -n "$PREV_TAG" ]; then
+              echo "## Changes"
+              git log --pretty=format:"- %s" "$PREV_TAG"..HEAD
+              echo ""
+              echo ""
+            fi
+            echo "## Docker Image"
+            echo ""
+            echo "- **Image:** [\`${IMAGE}:${VERSION}\`](https://github.com/${{ github.repository }}/pkgs/container/winet2mqtt)"
+            echo "- **Digest:** \`${DIGEST}\`"
+            echo ""
+            echo '```bash'
+            echo "docker pull ${IMAGE}:${VERSION}"
+            echo '```'
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Create release
         run: |

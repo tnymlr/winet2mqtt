@@ -13,9 +13,9 @@ FROM gcr.io/distroless/static-debian12:nonroot
 
 COPY --from=builder /winet2mqtt /winet2mqtt
 
-EXPOSE 8080
+EXPOSE 8081
 
-HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+HEALTHCHECK --interval=10s --timeout=5s --start-period=30s --retries=3 \
     CMD ["/winet2mqtt", "health"]
 
 ENTRYPOINT ["/winet2mqtt", "server"]
